@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Article } from '../../interfaces/article';
 
 @Component({
   selector: 'app-latest-news',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./latest-news.component.scss']
 })
 export class LatestNewsComponent implements OnInit {
-
+  @Input() articles: Article[] = [];
   constructor() { }
 
   ngOnInit(): void {

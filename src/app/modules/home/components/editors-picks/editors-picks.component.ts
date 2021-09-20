@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Article } from '../../interfaces/article';
 
 @Component({
   selector: 'app-editors-picks',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./editors-picks.component.scss']
 })
 export class EditorsPicksComponent implements OnInit {
-
+  @Input() articles: Article[] = [];
   constructor() { }
 
   ngOnInit(): void {
