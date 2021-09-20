@@ -1,0 +1,17 @@
+.header {
+  background-color: #ba1d32;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 100px;
+  align-items: center;
+  .btn {
+    a {
+      color: #ba1d32;
+      background-color: #ffff;
+      border-radius: 4px;
+      cursor: pointer;
+      padding: 20px;
+      text-decoration: none;
+    }
+  }
+}
