@@ -1,1 +1,25 @@
-<p>articles works!</p>
+<div class="articles" *ngIf="articles">
+  <div class="primary-articles">
+    <div class="image">
+      <img [src]="articles[0]?.urlToImage" />
+    </div>
+    <div class="article-details">
+      <div class="top-title">Mustreads</div>
+      <div class="title">
+        {{ articles[0]?.title }}
+      </div>
+      <div class="desc">
+        {{ articles[0]?.description }}
+      </div>
+      <div class="author">
+        <span class="text">By</span>
+        <span class="author-name">{{ articles[0]?.author }}</span>
+      </div>
+      <app-social-interaction
+        [shareNumber]="300"
+        [commentsNum]="500"
+      ></app-social-interaction>
+    </div>
+  </div>
+  <div class="secondary-articles"></div>
+</div>

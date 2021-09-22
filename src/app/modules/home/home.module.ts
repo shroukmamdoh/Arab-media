@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { PageDetailsComponent } from './components/page-details/page-details.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { LatestNewsComponent } from './components/latest-news/latest-news.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -21,7 +22,8 @@ import { LatestNewsComponent } from './components/latest-news/latest-news.compon
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    SharedModule
   ]
 })
 export class HomeModule { }

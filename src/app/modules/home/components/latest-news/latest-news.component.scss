@@ -1,4 +1,9 @@
 .news-content {
     display: flex;
     flex-wrap: nowrap;
+    .left-page-side {
+        margin-right: 16px;
+    }
+    .right-page-side {
+    }
 }

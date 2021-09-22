@@ -1,0 +1,45 @@
+.articles {
+  width: 700px;
+  .image {
+    width: 700px;
+    img {
+      width: 100%;
+      border-radius: 1px;
+    }
+  }
+  .article-details {
+    .top-title {
+      font-size: 14px;
+      font-weight: bold;
+      margin: 12px 0px;
+      color: #716e71;
+    }
+    .title {
+      font-weight: bold;
+      color: #252525;
+      font-size: 46px;
+    }
+    .desc {
+      font-size: 22px;
+      color: #545154;
+      margin-top: 16px;
+      line-height: 32px;
+      font-weight: 400;
+    }
+    .author {
+      margin-top: 60px;
+      margin-bottom: 40px;
+      span {
+        font-size: 18px;
+        font-weight: 400;
+      }
+      span.text {
+        color: #545154;
+        margin-right: 8px;
+      }
+      span.author-name {
+        color: #bc1d32;
+      }
+    }
+  }
+}
