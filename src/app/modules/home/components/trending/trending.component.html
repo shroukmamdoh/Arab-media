@@ -1,4 +1,22 @@
-<p>trending works!</p>
-<div *ngFor="let item of articles">
-{{item.author}}
+<div class="ternding">
+  <div class="title">Trending</div>
+  <div class="content">
+    <div class="box" *ngFor="let item of articles; let i = index">
+      <div class="image" [routerLink]="['/home/details', i]">
+        <img [src]="item.urlToImage" />
+      </div>
+      <div class="date">
+        {{ item.publishedAt | date }}
+      </div>
+      <div class="article-title">
+        {{ item.title }}
+      </div>
+      <div class="date">
+        {{ item.publishedAt | date }}
+      </div>
+      <div class="desc">
+        {{ item.description }}
+      </div>
+    </div>
+  </div>
 </div>

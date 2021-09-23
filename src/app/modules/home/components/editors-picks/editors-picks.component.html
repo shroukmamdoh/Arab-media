@@ -1,1 +1,22 @@
-<p>editors-picks works!</p>
+<div class="editor-picks">
+  <div class="title">Editors Picks</div>
+  <div class="content" *ngFor="let item of articles;let i = index">
+    <div class="image" [routerLink]="['/home/details', i]">
+      <img [src]="item.urlToImage" />
+    </div>
+    <div class="details" [routerLink]="['/home/details', i]">
+      <div class="top-title">MUSTREADS</div>
+      <div class="article-title">
+        {{ item.title }}
+      </div>
+      <div class="desc">
+        {{ item.description }}    
+      </div>
+      <div class="author">
+        <span class="text">By</span>
+        <span class="author-name">{{ item.author }}</span>
+        <span class="time">- {{ item.publishedAt | date }}</span>
+      </div>
+    </div>
+  </div>
+</div>

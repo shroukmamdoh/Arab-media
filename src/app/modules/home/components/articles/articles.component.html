@@ -21,5 +21,32 @@
       ></app-social-interaction>
     </div>
   </div>
-  <div class="secondary-articles"></div>
+  <div class="secondary-articles">
+    <div class="image" [routerLink]="['/home/details', 0]">
+      <img [src]="articles[1]?.urlToImage" />
+    </div>
+    <div class="article-details">
+      <div class="top-title">TECH</div>
+      <div class="desc">
+        {{ articles[1]?.description }}
+      </div>
+      <app-social-interaction
+        [shareNumber]="12"
+        [commentsNum]="15"
+      ></app-social-interaction>
+      <div class="image" style="margin-top:60px" [routerLink]="['/home/details', 1]">>
+        <img [src]="articles[2]?.urlToImage" />
+      </div>
+      <div class="article-details">
+        <div class="top-title">TECH</div>
+        <div class="desc">
+          {{ articles[2]?.description }}
+        </div>
+        <app-social-interaction
+          [shareNumber]="12"
+          [commentsNum]="15"
+        ></app-social-interaction>
+      </div>
+    </div>
+  </div>
 </div>

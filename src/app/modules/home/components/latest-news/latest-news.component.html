@@ -1,9 +1,41 @@
 <div class="news-content">
-    <div class="left-page-side">
-        <app-articles [articles]="articles"></app-articles>
-        <app-editors-picks [articles]="articles"></app-editors-picks>
+  <div class="left-page-side">
+    <app-articles [articles]="articles"></app-articles>
+    <app-editors-picks [articles]="articles"></app-editors-picks>
+  </div>
+  <div class="right-page-side">
+    <div class="recent-posts">
+      <div class="title">Recent Posts</div>
+      <div *ngFor="let item of articles; let i = index">
+        <div class="item" *ngIf="i < 3" [routerLink]="['/home/details', i]">
+          <div class="image">
+            <img [src]="item.urlToImage" />
+          </div>
+          <div class="details">
+            <div class="desc">
+              {{ item.title }}
+            </div>
+            <div class="time">
+              {{ item.publishedAt | date }}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="right-page-side">
-        right side
+    <div class="recent-posts most">
+      <div class="title">5 Most Popular</div>
+      <div *ngFor="let item of articles; let i = index">
+        <div class="item" *ngIf="i < 3" [routerLink]="['/home/details', i]">
+          <div class="number">
+            {{i + 1}}
+          </div>
+          <div class="details">
+            <div class="desc">
+              {{ item.title }}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

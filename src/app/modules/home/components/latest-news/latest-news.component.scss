@@ -1,9 +1,60 @@
 .news-content {
-    display: flex;
-    flex-wrap: nowrap;
-    .left-page-side {
-        margin-right: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  .left-page-side {
+    margin-right: 16px;
+  }
+  .right-page-side {
+    width: 564px;
+    .title {
+      color: #ba1d32;
+      font-size: 30px;
+      margin-bottom: 4px;
     }
-    .right-page-side {
+    .recent-posts {
+      border: 1px solid #e4e4e4;
+      border-radius: 6px;
+      padding: 20px;
+      .item {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px 0;
+        border-bottom: 1px solid #9e9e9e2b;
+        cursor: pointer;
+        .image {
+          width: 150px;
+          height: 80px;
+          border-radius: 4px;
+          background-color: lightgray;
+          margin-right: 8px;
+          img {
+            width: 100%;
+            object-fit: cover;
+            height: 80px;
+            border-radius: 4px;
+          }
+        }
+        .details {
+          width: 364px;
+          .desc {
+            font-size: 15px;
+            line-height: 22px;
+          }
+          .time {
+            font-size: 15px;
+            color: gray;
+            line-height: 22px;
+          }
+        }
+      }
     }
+    .most {
+        margin-top: 16px;
+        .number {
+            color: #ba1d32;
+            font-size: 20px;
+            margin-right: 16px;
+        }
+    }
+  }
 }

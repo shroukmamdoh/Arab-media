@@ -1,0 +1,70 @@
+.editor-picks {
+  max-width: 1066px;
+  margin-top: 40px;
+  .title {
+    font-size: 30px;
+    color: #545154;
+  }
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0px;
+    border-bottom: 2px solid #9e9e9e2b;
+    .image {
+      width: 250px;
+      margin-right: 16px;
+      border-radius: 4px;
+      background-color: lightgray;
+      cursor: pointer;
+      img {
+        width: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        border-radius: 4px;
+        height: 100%;
+      }
+    }
+    .details {
+      width: 800px;
+      margin-top: -10px;
+      cursor: pointer;
+      .top-title {
+        font-size: 12px;
+        font-weight: bold;
+        margin: 12px 0px;
+        color: #716e71;
+      }
+      .article-title {
+        font-weight: bold;
+        color: #252525;
+        font-size: 20px;
+      }
+      .desc {
+        font-size: 18px;
+        color: #545154;
+        margin-top: 8px;
+        line-height: 28px;
+        font-weight: 400;
+      }
+      .author {
+        margin-top: 10px;
+        span {
+          font-size: 18px;
+          font-weight: 400;
+        }
+        span.text {
+          color: #545154;
+          margin-right: 8px;
+        }
+        span.author-name {
+          color: #bc1d32;
+        }
+        span.time {
+          color: #9e9e9e;
+          font-size: 14px;
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+}
