@@ -1,6 +1,6 @@
 <div class="articles" *ngIf="articles">
   <div class="primary-articles">
-    <div class="image">
+    <div class="image" [routerLink]="['/home/details', 0]">
       <img [src]="articles[0]?.urlToImage" />
     </div>
     <div class="article-details">
@@ -22,7 +22,7 @@
     </div>
   </div>
   <div class="secondary-articles">
-    <div class="image" [routerLink]="['/home/details', 0]">
+    <div class="image" [routerLink]="['/home/details', 1]">
       <img [src]="articles[1]?.urlToImage" />
     </div>
     <div class="article-details">
@@ -34,7 +34,7 @@
         [shareNumber]="12"
         [commentsNum]="15"
       ></app-social-interaction>
-      <div class="image" style="margin-top:60px" [routerLink]="['/home/details', 1]">>
+      <div class="image" style="margin-top:60px" [routerLink]="['/home/details', 2]">
         <img [src]="articles[2]?.urlToImage" />
       </div>
       <div class="article-details">

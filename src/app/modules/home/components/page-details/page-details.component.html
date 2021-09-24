@@ -1,69 +1,99 @@
 <div class="details-page">
-    <div class="title">
-        {{articles[currentArticleIndex]?.title}}
+  <div class="title">
+    {{ articles[currentArticleIndex]?.title }}
+  </div>
+  <div class="author">
+    <span class="text" *ngIf="articles[currentArticleIndex]?.author">By</span>
+    <span class="author-name">{{ articles[currentArticleIndex]?.author }}</span>
+    <span class="date">{{
+      articles[currentArticleIndex]?.publishedAt | date
+    }}</span>
+  </div>
+  <div class="content">
+    <div class="socials">
+      <div class="shares-num">33</div>
+      <div class="shares-text">shares</div>
+      <div class="others" *ngFor="let social of socials">
+        <img [src]="social.icon" />
+        <span>{{ social.name }}</span>
+      </div>
     </div>
-    <div class="author">
-        <span class="text">By</span>
-        <span class="author-name">{{articles[currentArticleIndex]?.author}}</span>
-        <span class="date">{{articles[currentArticleIndex]?.publishedAt | date}}</span>
-    </div>
-    <div class="content">
-        <div class="socials">
-123
+    <div class="details">
+      <div class="image">
+        <img [src]="articles[currentArticleIndex]?.urlToImage" />
+      </div>
+      <div class="desc">
+        {{ articles[currentArticleIndex]?.description }}
+      </div>
+      <div class="btns">
+        <a class="btn like">
+          <span class="icon"
+            ><img src="../../../../../assets/images/like.png"
+          /></span>
+          <span>I found this helpful</span>
+        </a>
+        <a class="btn dislike">
+          <span class="icon">
+            <img src="../../../../../assets/images/dislike1.png" />
+          </span>
+          <span>I did not find this helpful</span>
+        </a>
+      </div>
+      <div class="comments">
+        <div class="comment-title">Comments</div>
+        <div class="comment">
+          <div class="image">
+            <img [src]="articles[currentArticleIndex]?.urlToImage" />
+          </div>
+          <div class="comment-details">
+            <div class="person">
+              <span class="person-name">{{
+                articles[currentArticleIndex]?.author
+              }}</span>
+              <span class="date">{{
+                articles[currentArticleIndex]?.publishedAt | date
+              }}</span>
+              <span class="replay">Replay</span>
+            </div>
+            <div class="comment-text">
+              {{ articles[currentArticleIndex]?.description }}
+            </div>
+          </div>
         </div>
-        <div class="details">
-            <div class="image">
-                <img [src]="articles[currentArticleIndex]?.urlToImage"/>
-            </div>
-            <div class="desc">
-                {{articles[currentArticleIndex]?.description}}
-            </div>
-            <div class="btns">
-                <a class="btn like">
-                    <span class="icon"></span>
-                    <span>I found this helpful</span>
-                </a>
-                <a class="btn like">
-                    <span class="icon"></span>
-                    <span>I did not find this helpful</span>
-                </a>
-            </div>
-            <div class="comments">
-                <div class="comment">
-                    <div class="image">
-                        <img [src]="articles[currentArticleIndex]?.urlToImage">
-                    </div>
-                    <div class="comment-details">
-                        <div class="person">
-                            <span class="person-name">{{articles[currentArticleIndex]?.author}}</span>
-                            <span class="date">{{articles[currentArticleIndex]?.publishedAt | date}}</span>
-                            <span class="replay">Replay</span>
-                        </div>
-                        <div class="comment-text">
-                            {{articles[currentArticleIndex]?.description}}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="conversation">
-                <form [formGroup]="commentForm" name="commentForm">
-                    <div class="form-group">
-                        <input type="text" name="name" formControlName="name" placeholder="Name"/>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" formControlName="email" placeholder="Email"/>
-                        <span>will not published</span>
-                    </div>
-                    <div class="form-group">
-                        <textarea type="email" name="email" formControlName="comment" placeholder="Message"></textarea>
-                        <span>will not published</span>
-                    </div>
-                    <div class="submit-btn">
-                        <button type="submit" (click)="sendComment()">Send</button>
-                    </div>
-
-                </form>
-            </div>
-        </div>
+      </div>
+      <div class="conversation">
+        <div class="form-title">Join our conversation</div>
+        <form [formGroup]="commentForm" name="commentForm">
+          <div class="form-group">
+            <input
+              type="text"
+              name="name"
+              formControlName="name"
+              placeholder="Name"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              name="email"
+              formControlName="email"
+              placeholder="Email"
+            />
+            <span class="hint">will not published</span>
+          </div>
+          <div class="form-group">
+            <textarea
+              type="text"
+              name="comment"
+              formControlName="comment"
+              placeholder="Message"
+            ></textarea>
+          </div>
+          <div class="submit-btn">
+            <button type="submit" (click)="sendComment()">Send</button>
+          </div>
+        </form>
+      </div>
     </div>
+  </div>
 </div>

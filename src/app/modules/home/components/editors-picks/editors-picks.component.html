@@ -1,6 +1,6 @@
 <div class="editor-picks">
   <div class="title">Editors Picks</div>
-  <div class="content" *ngFor="let item of articles;let i = index">
+  <div class="content" [ngClass]="{'no-border': i === articles.length -1}" *ngFor="let item of articles;let i = index">
     <div class="image" [routerLink]="['/home/details', i]">
       <img [src]="item.urlToImage" />
     </div>

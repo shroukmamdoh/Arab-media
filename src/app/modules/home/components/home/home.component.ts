@@ -13,7 +13,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.homeService.getList().subscribe((res: any)=> {
-      console.log('data', res);
       this.homeService.articles = res.articles
       this.articles = res.articles
     },

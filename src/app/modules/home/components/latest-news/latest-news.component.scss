@@ -6,12 +6,15 @@
   }
   .right-page-side {
     width: 564px;
+    .no-border {
+      border: none !important;
+    }
     .title {
       color: #ba1d32;
       font-size: 30px;
       margin-bottom: 4px;
     }
-    .recent-posts {
+    .right-side {
       border: 1px solid #e4e4e4;
       border-radius: 6px;
       padding: 20px;
@@ -49,12 +52,50 @@
       }
     }
     .most {
-        margin-top: 16px;
-        .number {
-            color: #ba1d32;
-            font-size: 20px;
-            margin-right: 16px;
+      margin-top: 16px;
+      .number {
+        color: #ba1d32;
+        font-size: 20px;
+        margin-right: 16px;
+      }
+    }
+    .good-news {
+      margin-top: 16px;
+      .guid-text {
+        margin-top: 20px;
+        font-size: 12px;
+        line-height: 22px;
+        width: 364px;
+        margin-bottom: 20px;
+      }
+      .subscribe {
+        input {
+          width: 295px;
+          border: 2px solid #e4e4e4;
+          height: 40px;
+          border-radius: 4px;
+          margin-bottom: 14px;
+          padding: 0 14px;
+          &:focus {
+            outline: #e4e4e4 !important;
+          }
         }
+        a {
+          padding: 14px 36px;
+          padding: 12px 36px;
+          border-radius: 4px;
+          font-size: 17px;
+          cursor: pointer;
+          border: none;
+          background-color: #ba1d32;
+          color: white;
+          margin-top: 5px;
+        }
+        ::placeholder {
+          color: gray;
+          font-size: 16px;
+        }
+      }
     }
   }
 }

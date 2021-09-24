@@ -4,10 +4,15 @@
     <app-editors-picks [articles]="articles"></app-editors-picks>
   </div>
   <div class="right-page-side">
-    <div class="recent-posts">
+    <div class="right-side recent-posts">
       <div class="title">Recent Posts</div>
       <div *ngFor="let item of articles; let i = index">
-        <div class="item" *ngIf="i < 3" [routerLink]="['/home/details', i]">
+        <div
+          class="item"
+          [ngClass]="{ 'no-border': i === 2 }"
+          *ngIf="i < 3"
+          [routerLink]="['/home/details', i]"
+        >
           <div class="image">
             <img [src]="item.urlToImage" />
           </div>
@@ -22,12 +27,17 @@
         </div>
       </div>
     </div>
-    <div class="recent-posts most">
+    <div class="right-side most">
       <div class="title">5 Most Popular</div>
       <div *ngFor="let item of articles; let i = index">
-        <div class="item" *ngIf="i < 3" [routerLink]="['/home/details', i]">
+        <div
+          class="item"
+          [ngClass]="{ 'no-border': i === 4 }"
+          *ngIf="i < 5"
+          [routerLink]="['/home/details', i]"
+        >
           <div class="number">
-            {{i + 1}}
+            {{ i + 1 }}
           </div>
           <div class="details">
             <div class="desc">
@@ -35,6 +45,16 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="right-side good-news">
+      <div class="title">Good News Newssetter</div>
+      <div class="guid-text">
+        Subscribe to our email newsletter for good news, sent out every Monday.
+      </div>
+      <div class="subscribe">
+        <input type="text" name="email" placeholder="Email" />
+        <a>Subscribe</a>
       </div>
     </div>
   </div>

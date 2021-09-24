@@ -1,6 +1,9 @@
 .editor-picks {
   max-width: 1066px;
   margin-top: 40px;
+  .no-border {
+    border: none !important;
+  }
   .title {
     font-size: 30px;
     color: #545154;

@@ -13,6 +13,15 @@ export class PageDetailsComponent implements OnInit {
   articles: Article[] = [];
   currentArticleIndex: any;
   commentForm!: FormGroup;
+  socials = [
+    { icon: "../../../../../assets/images/email.png", name: "Email" },
+    {
+      icon: "../../../../../assets/images/facebook-app-symbol.svg",
+      name: "Facebook",
+    },
+    { icon: "../../../../../assets/images/twitter-icon.svg", name: "Twitter" },
+    { icon: "../../../../../assets/images/share.svg", name: "More" },
+  ];
   constructor(
     private homeService: HomeService,
     private router: ActivatedRoute,
@@ -26,7 +35,6 @@ export class PageDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.articles = this.homeService.articles;
-    console.log("articles", this.articles[this.currentArticleIndex]);
   }
 
   /**

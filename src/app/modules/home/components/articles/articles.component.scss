@@ -7,9 +7,9 @@
     background-color: lightgray;
     cursor: pointer;
     img {
-      width: 100%;
-      border-radius: 1px;
-      object-fit: cover;
+      width: 700px;
+      border-radius: 4px;
+      background-color: lightgray;
     }
   }
   .article-details {
@@ -54,9 +54,12 @@
       border-radius: 4px;
       background-color: lightgray;
       cursor: pointer;
+      height: 495px;
       img {
         width: 100%;
         border-radius: 1px;
+        object-fit: cover;
+        height: 100%;
       }
     }
     .article-details {
@@ -101,6 +104,12 @@
     margin-left: 16px;
     .image {
       width: 350px !important;
+      height: 233px;
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }
